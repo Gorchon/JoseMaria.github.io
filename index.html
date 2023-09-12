@@ -51,25 +51,114 @@
 					<div id="main">
 
 						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">May 2, 2023</span>
-									<h2><a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis">Analyzing SARS-CoV-2 (COVID) genomes <br />
-										with R for data analysis</a></h2>
-									<p>I carried out a comprehensive analysis of the genome of the SARS-CoV-2 virus using data analysis and genomic sequencing tools in the R language.
-										 We identified the most relevant mutations in terms of virulence, transmissibility, and resistance to available treatments. The information obtained
-										  could be useful for developing effective therapies and vaccines against COVID-19, as well as for more efficient prevention and control strategies. 
-										  This study helps to understand the evolution and behavior of the virus over time, and the fight against this infectious disease benefits from the 
-										  research and results obtained.</p>
+						<article class="post featured">
+							<header class="major">
+								<span class="date">Oct 17, 2022</span>
+								<h2><a href="https://github.com/Gorchon/Nasa_space_apps_22">Nasa Space Apps Challenge <br />
+									-OPITRUST-</a></h2>
+								<p>I was part of a 5-person team that took on the NASA Space Apps Challenge hackathon. Together, we developed an innovative 
+									blockchain-based app using TypeScript, Figma, and React. Our primary goal was to create a secure and transparent system for disseminating scientific articles.
+						
+									The app leverages blockchain technology to establish an unalterable record of each article's 
+									publication, guaranteeing the authenticity and source of every piece of scientific work. To make it user-friendly for scientists, we incorporated Figma and React to design an intuitive interface for publishing and sharing articles.
+									
+									The potential impact of our app is significant. It could revolutionize the way scientific articles are published and shared, thanks to blockchain 
+									technology ensuring the credibility and source of these articles. Moreover, by streamlining and adding transparency to the publication process, it has the potential to save scientists valuable time and resources.
+								</p>
+							</header>
+							<div id="imageContainer" class="image main">
+								<img id="rotatingImage" src="images/opi.png" alt="" />
+							</div>
+							<ul class="actions special">
+								<li><a href="https://github.com/Gorchon/Nasa_space_apps_22" class="button large">VIEW PROJECT</a></li>
+							</ul>
+						</article>
+						
+						<script>
+							const images = ["images/opi.png", "images/opi2.png", "images/opi3.png"];
+							let currentImageIndex = 0;
+							function rotateImages() {
+								currentImageIndex = (currentImageIndex + 1) % images.length;
+								const rotatingImage = document.getElementById("rotatingImage");
+								rotatingImage.src = images[currentImageIndex];
+							}
+						
+							setInterval(rotateImages, 4000); // Cambia la imagen cada 4 segundos (4000 ms)
+						</script>
+						
+							
+							
+						<!-- Posts -->
+						
+						<section class="posts">
+							<article>
+								<header>
+									<span class="date">sep 10, 2023</span>
+									<h2><a href="https://github.com/Gorchon/sudoku">AI-Driven Sudoku Solver</a></h2>
 								</header>
-								<a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis" class="image main"><img src="images/coronavirus8x5_0.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis" class="button large">VIEW PROJECT</a></li>
+								
+								<!-- Video Player (with adjusted width and height) -->
+								<video controls id="videoPlayer" width="380" height="280">
+									<source src="images/sudoku.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							
+								<!-- Image Element (Initially Hidden) -->
+								<img src="images/nokia_s.webp" alt="" id="displayImage" style="display: none;">
+							
+								<p>
+									I had the privilege of working on a Sudoku-solving project using Python, where I implemented backtracking algorithms to create
+									an AI-driven solver. The solver demonstrated commendable puzzle-solving capabilities, consistently providing solutions within seconds,
+									which I found rather satisfying. To enhance the user experience, I integrated a feature for screenshot analysis, seamlessly blending it with Python's 
+									algorithmic execution. This addition ensured a more user-friendly interface for Sudoku enthusiasts, and it felt like a small but meaningful contribution. 
+									Through this project, I had the opportunity to sharpen my algorithmic skills and explore creative ways to solve problems, which was a valuable learning experience.
+								</p>
+								<ul>
+									<a href="https://github.com/Gorchon/sudoku" class="button large">VIEW PROJECT</a>
 								</ul>
 							</article>
-
-						<!-- Posts -->
-							<section class="posts">
+							<article>
+									<header>
+										<span class="date">Aug 10, 2023</span>
+										<h2><a href="https://gorchon.github.io/Snake_game/">Nokia Snake Game <br />
+										</a></h2>
+									</header>
+									<a href="https://gorchon.github.io/Snake_game/" class="image main"><img src="images/nonos.jpg" alt="" /></a>
+									<p>Experience the Snake Game Project, a technical feat in game development. Built using HTML5, JavaScript, and the Canvas API,
+										 this project tackled challenges like game logic, UI design, animation, event handling, and audio integration. Explore the fusion 
+										 of coding and design, offering players an engaging and challenging gaming experience. Dive into the world of web-based gaming and 
+										 witness the mastery of JavaScript, all wrapped up in this classic Snake Game.</p>
+									<ul <li><a href="https://github.com/Gorchon/Snake_game" class="button large">VIEW PROJECT</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">Jul 12, 2023</span>
+										<h2><a href="https://github.com/Gorchon/snakes_and_ladders_oop">OOP Snakes and Ladders: Flexible Game Design <br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/Gorchon/snakes_and_ladders_oop" class="image main"><img src="images/snake_l.png" alt="" /></a>
+									<p>Snakes and Ladders project using OOP. Classes represent game elements like board, snakes, ladders, and players.
+										 Encapsulated logic for better organization. Solid design principles ensure flexibility. 
+										 OOP enhances code structure, reusability, and modularity. Powerful tool for complex apps.</p>
+									<ul <li><a href="https://github.com/Gorchon/snakes_and_ladders_oop" class="button large">VIEW PROJECT</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">May 2, 2023</span>
+										<h2><a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis">Analyzing SARS-CoV-2 (COVID) genomes <br />
+											with R for data analysis</a></h2>
+									</header>
+									<a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis" class="image main"><img src="images/coronavirus8x5_0.jpg" alt="" /></a>
+									<p>I carried out a comprehensive analysis of the genome of the SARS-CoV-2 virus using data analysis and genomic sequencing tools in the R language.
+										We identified the most relevant mutations in terms of virulence, transmissibility, and resistance to available treatments. The information obtained
+										 could be useful for developing effective therapies and vaccines against COVID-19, as well as for more efficient prevention and control strategies. 
+										 This study helps to understand the evolution and behavior of the virus over time, and the fight against this infectious disease benefits from the 
+										 research and results obtained.</p>
+									<ul <li><a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis" class="button large">VIEW PROJECT</a></li>
+									</ul>
+								</article>
 								<article>
 									<header>
 										<span class="date">April 4, 2023</span>
@@ -143,6 +232,7 @@
 										<li><a href="https://github.com/Gorchon/electric_fields" class="button">View project</a></li>
 									</ul>
 								</article>
+								
 								
 							</section>
 
