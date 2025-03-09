@@ -1,65 +1,50 @@
-# Deploy Jekyll with GitHub Pages
-name: Deploy Jekyll with GitHub Pages
-
+name: Deploy Jekyll site to GitHub Pages
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches: ["main"]  # Adjust the branch name as needed
 
+# Set minimal required permissions
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  contents: read          # allow pulling repository content
+  # 'pages: write' and 'id-token: write' are set at job level for security
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout source
+        uses: actions/checkout@v4
 
-      - name: Setup Ruby and Jekyll
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ruby-full build-essential zlib1g-dev
-          sudo gem install jekyll
-          sudo gem install webrick  # Required for Jekyll serve in Ruby 3.0+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"           # Use a Ruby version that supports your Jekyll
+          bundler-cache: true          # Install dependencies from Gemfile and cache them
 
-      - name: Verify Ruby and Jekyll installation
-        run: |
-          ruby -v             # Show installed Ruby version
-          gem -v              # Show installed RubyGems version
-          jekyll -v           # Verify Jekyll is installed
+      - name: Configure Pages
+        id: pages                      # ID used to retrieve Pages config outputs
+        uses: actions/configure-pages@v5
 
-      - name: Build Jekyll site
-        run: jekyll build --destination _site
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production       # Set Jekyll environment to production for proper asset handling
 
-      - name: Verify build output
-        run: ls -la _site  # Check if files were generated
-
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: _site
-
+          path: "./_site"              # Upload the _site folder as an artifact named 'github-pages' (default)
+  
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    environment:
+      name: github-pages               # Deploy to the GitHub Pages environment
+      url: ${{ steps.deployment.outputs.page_url }}  # Assign the Pages URL after deployment
+    permissions:
+      pages: write    # Allow deploying to Pages
+      id-token: write # Allow OIDC authentication (required for Pages deployment)
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: github-pages
-          path: .
-          
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
