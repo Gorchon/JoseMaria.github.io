@@ -20,20 +20,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Setup Pages
+
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v3
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+
+      - name: Install Jekyll dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby-full build-essential zlib1g-dev
+          gem install bundler jekyll
+
+      - name: Build Jekyll site
+        run: |
+          bundle install
+          jekyll build --destination _site
+
+      - name: Verify build output
+        run: ls -l _site  # ✅ Verificar que se crearon archivos
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Asegurar versión v3
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages  # Nombre del artifact
-          path: ./_site       # Ruta correcta donde Jekyll genera el build
+          name: github-pages  # ✅ Asegurar el nombre del artifact
+          path: _site         # ✅ Ruta de salida de Jekyll
 
   # Deployment job
   deploy:
