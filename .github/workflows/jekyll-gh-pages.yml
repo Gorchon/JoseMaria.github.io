@@ -32,13 +32,13 @@ jobs:
           sudo apt-get install -y ruby-full build-essential zlib1g-dev
           echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
           echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-          export GEM_HOME="$HOME/gems"
-          export PATH="$HOME/gems/bin:$PATH"
+          source ~/.bashrc
           gem install bundler --user-install
           gem install jekyll --user-install
 
       - name: Build Jekyll site
         run: |
+          source ~/.bashrc
           export GEM_HOME="$HOME/gems"
           export PATH="$HOME/gems/bin:$PATH"
           bundle install
