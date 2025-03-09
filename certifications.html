@@ -23,8 +23,18 @@
 			.certification-item h3 {
 				margin: 0;
 			}
-			.certification-item .button.small {
-				margin-top: 0.5em;
+			/* Make the LinkedIn link stand out more */
+			.certifications-link {
+				font-size: 1.2em;
+				font-weight: bold;
+				padding: 0.75em;
+				background-color: #f0f0f0;
+				display: inline-block;
+				border-radius: 4px;
+				margin-bottom: 1em;
+			}
+			.certifications-link a {
+				text-decoration: none;
 			}
 		</style>
 	</head>
@@ -48,7 +58,7 @@
 				</ul>
 				<ul class="icons">
 					<li>
-						<a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%A1-soto-valenzuela-070a2626b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWa79aa2fRM2e0X4j7VsuSA%3D%3D" 
+						<a href="https://www.linkedin.com/in/jos%C3%A9-m-soto-vzla/" 
 						   class="icon brands fa-linkedin">
 							<span class="label">LinkedIn</span>
 						</a>
@@ -68,11 +78,12 @@
 						<h2>Certifications</h2>
 					</header>
 
-					<!-- Link to LinkedIn certifications -->
-                    <p>
-                        <strong>Click <a href="https://www.linkedin.com/in/jos%C3%A9-m-soto-vzla/details/certifications/" target="_blank" rel="noopener noreferrer">here</a> to check all my certification validations on LinkedIn.</strong>
-                    </p>
-                    
+					<!-- Link to LinkedIn certifications (more visible) -->
+					<p class="certifications-link">
+						Click <a href="https://www.linkedin.com/in/jos%C3%A9-m-soto-vzla/details/certifications/" target="_blank" rel="noopener noreferrer">
+							here
+						</a> to check all my certification validations on LinkedIn
+					</p>
 
 					<!-- 1) Oracle Cloud Infrastructure 2024 Certified Foundations Associate -->
 					<article class="certification-item">
@@ -82,7 +93,6 @@
 							<p><strong>Issued:</strong> Feb 2025 &ndash; <strong>Expires:</strong> Feb 2027</p>
 						</header>
 						<p><strong>Skills:</strong> Cloud Infrastructure, OCI</p>
-						<p><a href="#" class="button small">Show credential</a></p>
 					</article>
 
 					<!-- 2) Mathematics for Machine Learning: Linear Algebra -->
@@ -93,7 +103,6 @@
 							<p><strong>Issued:</strong> May 2024</p>
 						</header>
 						<p><strong>Skills:</strong> Linear Algebra, Machine Learning, Data Science</p>
-						<p><a href="#" class="button small">Show credential</a></p>
 					</article>
 
 					<!-- 3) Relational Database Design -->
@@ -107,7 +116,6 @@
 							<strong>Credential ID:</strong> CYA5TTHAX9U<br>
 							<strong>Skills:</strong> Databases
 						</p>
-						<p><a href="#" class="button small">Show credential</a></p>
 					</article>
 
 					<!-- 4) Cybersecurity and the Internet of Things -->
@@ -117,10 +125,7 @@
 							<p><strong>Organization:</strong> Kennesaw State University</p>
 							<p><strong>Issued:</strong> Sep 2023</p>
 						</header>
-						<p>
-							<strong>Credential ID:</strong> RZ6W7CWUKSK2
-						</p>
-						<p><a href="#" class="button small">Show credential</a></p>
+						<p><strong>Credential ID:</strong> RZ6W7CWUKSK2</p>
 					</article>
 
 					<!-- 5) Divide and Conquer, Sorting and Searching, and Randomized Algorithms -->
@@ -130,10 +135,7 @@
 							<p><strong>Organization:</strong> Stanford University</p>
 							<p><strong>Issued:</strong> Aug 2023</p>
 						</header>
-						<p>
-							<strong>Credential ID:</strong> VTB73WQEEGJ
-						</p>
-						<p><a href="#" class="button small">Show credential</a></p>
+						<p><strong>Credential ID:</strong> VTB73WQEEGJ</p>
 					</article>
 
 					<!-- 6) Creating a professional career in cybersecurity -->
@@ -144,7 +146,6 @@
 							<p><strong>Issued:</strong> May 2023</p>
 						</header>
 						<p><strong>Skills:</strong> Cybersecurity</p>
-						<p><a href="#" class="button small">Show credential</a></p>
 					</article>
 
 					<!-- 7) Lean Six Sigma White Belt Certification -->
@@ -155,7 +156,6 @@
 							<p><strong>Issued:</strong> May 2023</p>
 						</header>
 						<p><strong>Skills:</strong> LSS</p>
-						<p><a href="#" class="button small">Show credential</a></p>
 					</article>
 
 					<!-- 8) TypeScript Control Structures -->
@@ -166,7 +166,6 @@
 							<p><strong>Issued:</strong> Mar 2023</p>
 						</header>
 						<p><strong>Skills:</strong> TypeScript</p>
-						<p><a href="#" class="button small">Show credential</a></p>
 					</article>
 
 					<!-- 9) TypeScript variables and Data Types -->
@@ -177,7 +176,6 @@
 							<p><strong>Issued:</strong> Mar 2023</p>
 						</header>
 						<p><strong>Skills:</strong> TypeScript</p>
-						<p><a href="#" class="button small">Show credential</a></p>
 					</article>
 
 					<!-- 10) Programming Foundations with JavaScript, HTML and CSS -->
@@ -188,7 +186,6 @@
 							<p><strong>Issued:</strong> Jan 2023</p>
 						</header>
 						<p><strong>Skills:</strong> JavaScript, HTML, CSS</p>
-						<p><a href="#" class="button small">Show credential</a></p>
 					</article>
 				</section>
 			</div>
@@ -215,7 +212,8 @@
 						<h3>Social</h3>
 						<ul class="icons alt">
 							<li>
-								<a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%A1-soto-valenzuela-070a2626b" class="icon brands alt fa-linkedin">
+								<a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%A1-soto-valenzuela-070a2626b" 
+								   class="icon brands alt fa-linkedin">
 									<span class="label">LinkedIn</span>
 								</a>
 							</li>
