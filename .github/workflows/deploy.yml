@@ -31,16 +31,15 @@ jobs:
 
       - name: Verify Ruby and Jekyll installation
         run: |
-          ruby -v             # Show installed Ruby version
-          gem -v              # Show installed RubyGems version
-          jekyll -v           # Verify Jekyll is installed
+          ruby -v
+          gem -v
+          jekyll -v
 
       - name: Build Jekyll site
-        run: |
-          jekyll build --destination _site
+        run: jekyll build --destination _site
 
       - name: Verify build output
-        run: ls -l _site  # Check if files were generated
+        run: ls -la _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -55,6 +54,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download pages artifact
+        uses: actions/download-pages-artifact@v3
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
