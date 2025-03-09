@@ -26,21 +26,17 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby-full build-essential zlib1g-dev
-          sudo gem install bundler
           sudo gem install jekyll
           sudo gem install webrick  # Required for Jekyll serve in Ruby 3.0+
 
-      - name: Verify Ruby and Bundler installation
+      - name: Verify Ruby and Jekyll installation
         run: |
           ruby -v             # Show installed Ruby version
           gem -v              # Show installed RubyGems version
-          bundle -v           # Verify Bundler is installed
           jekyll -v           # Verify Jekyll is installed
 
-      - name: Install dependencies and build Jekyll site
+      - name: Build Jekyll site
         run: |
-          bundle config set --local path 'vendor/bundle'
-          bundle install
           jekyll build --destination _site
 
       - name: Verify build output
