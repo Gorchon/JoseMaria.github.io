@@ -1,4 +1,4 @@
-# Deploy Jekyll with GitHub Pages dependencies preinstalled
+# Deploy Jekyll with GitHub Pages
 name: Deploy Jekyll with GitHub Pages
 
 on:
@@ -16,36 +16,40 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v3
-
-      - name: Install Ruby and Jekyll dependencies
+      - name: Setup Ruby and Jekyll
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby-full build-essential zlib1g-dev
           echo 'export GEM_HOME="$HOME/gems"' >> $GITHUB_ENV
           echo 'export PATH="$HOME/gems/bin:$PATH"' >> $GITHUB_ENV
-          export GEM_HOME="$HOME/gems"
-          export PATH="$HOME/gems/bin:$PATH"
+          source $GITHUB_ENV  # ✅ Load environment variables
           gem install bundler --user-install
           gem install jekyll --user-install
+          gem install webrick --user-install  # ✅ Required for Jekyll serve in Ruby 3.0+
+
+      - name: Verify Ruby and Bundler installation
+        run: |
+          source $GITHUB_ENV  # ✅ Ensure variables persist
+          ruby -v             # ✅ Show installed Ruby version
+          gem -v              # ✅ Show installed RubyGems version
+          bundle -v           # ✅ Verify Bundler is installed
+          jekyll -v           # ✅ Verify Jekyll is installed
 
       - name: Install dependencies and build Jekyll site
         run: |
-          source $GITHUB_ENV  # Load environment variables
+          source $GITHUB_ENV  # ✅ Load environment variables
           bundle config set --local path 'vendor/bundle'
           bundle install
           jekyll build --destination _site
 
       - name: Verify build output
-        run: ls -l _site  # Check if files are correctly generated
+        run: ls -l _site  # ✅ Check if files were generated
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -53,7 +57,6 @@ jobs:
           name: github-pages
           path: _site
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
