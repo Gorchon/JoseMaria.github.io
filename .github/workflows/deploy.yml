@@ -1,50 +1,50 @@
-name: Deploy Jekyll site to GitHub Pages
-on:
-  push:
-    branches: ["main"]  # Adjust the branch name as needed
+# name: Deploy Jekyll site to GitHub Pages
+# on:
+#   push:
+#     branches: ["main"]  # Adjust the branch name as needed
 
-# Set minimal required permissions
-permissions:
-  contents: read          # allow pulling repository content
-  # 'pages: write' and 'id-token: write' are set at job level for security
+# # Set minimal required permissions
+# permissions:
+#   contents: read          # allow pulling repository content
+#   # 'pages: write' and 'id-token: write' are set at job level for security
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout source
+#         uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.2"           # Use a Ruby version that supports your Jekyll
-          bundler-cache: true          # Install dependencies from Gemfile and cache them
+#       - name: Set up Ruby
+#         uses: ruby/setup-ruby@v1
+#         with:
+#           ruby-version: "3.2"           # Use a Ruby version that supports your Jekyll
+#           bundler-cache: true          # Install dependencies from Gemfile and cache them
 
-      - name: Configure Pages
-        id: pages                      # ID used to retrieve Pages config outputs
-        uses: actions/configure-pages@v5
+#       - name: Configure Pages
+#         id: pages                      # ID used to retrieve Pages config outputs
+#         uses: actions/configure-pages@v5
 
-      - name: Build site with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production       # Set Jekyll environment to production for proper asset handling
+#       - name: Build site with Jekyll
+#         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+#         env:
+#           JEKYLL_ENV: production       # Set Jekyll environment to production for proper asset handling
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "./_site"              # Upload the _site folder as an artifact named 'github-pages' (default)
+#       - name: Upload Pages artifact
+#         uses: actions/upload-pages-artifact@v3
+#         with:
+#           path: "./_site"              # Upload the _site folder as an artifact named 'github-pages' (default)
   
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages               # Deploy to the GitHub Pages environment
-      url: ${{ steps.deployment.outputs.page_url }}  # Assign the Pages URL after deployment
-    permissions:
-      pages: write    # Allow deploying to Pages
-      id-token: write # Allow OIDC authentication (required for Pages deployment)
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+#   deploy:
+#     runs-on: ubuntu-latest
+#     needs: build
+#     environment:
+#       name: github-pages               # Deploy to the GitHub Pages environment
+#       url: ${{ steps.deployment.outputs.page_url }}  # Assign the Pages URL after deployment
+#     permissions:
+#       pages: write    # Allow deploying to Pages
+#       id-token: write # Allow OIDC authentication (required for Pages deployment)
+#     steps:
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@v4
