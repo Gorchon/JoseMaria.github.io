@@ -6,413 +6,399 @@
 -->
 <html>
 	<head>
-		<title> Chema's Portfolio</title>
+		<title>Chema's Portfolio - Projects</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-				
-					<div id="intro">
-						<h1>  Chema's Computer<br />
-							Science  Portfolio</h1>
-						<p>Welcome to my coding journey ! <br />
-							Computer Science Student skilled in software development, AI models, and a deep appreciation for mathematics. Check out my LinkedIn <a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-soto-valenzuela-070a2626b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWa79aa2fRM2e0X4j7VsuSA%3D%3D">¡Chema's LinkedIn page!</a>.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Code portfolio</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-
-						</ul>
-						
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-soto-valenzuela-070a2626b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWa79aa2fRM2e0X4j7VsuSA%3D%3D" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/Gorchon" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-						<article class="post featured">
-							<header class="major">
-								<span class="date">Apr 2024</span>
-								<h2><a href="https://github.com/FerretScript/ForestForecast">ForestForecast <br />
-									- Deforestation Predictor - Hackathon Winner</a></h2>
-								<p>I was part of a team that developed ForestForecast, an award-winning web platform designed to predict and visualize areas at high risk of illegal deforestation using satellite imagery and historical data from NASA, alongside Google Earth. This project won GuadaHack, one of Mexico's top hackathons.
-								
-									Utilizing advanced machine learning models, we achieved an accuracy of 88% in identifying regions susceptible to deforestation. Our platform integrates seamlessly with backend services using Flask and is deployed on AWS, ensuring robust real-time data processing and scalability.
-									
-									ForestForecast not only highlights at-risk areas but also enhances global conservation efforts by providing accessible, interactive, and insightful data visualization to a wide audience, including environmental agencies and local authorities.
-								</p>
-							</header>
-							<div id="imageContainer" class="image main">
-								<img id="rotatingImage" src="images/mexico.jpeg" alt="" />
-							</div>
-							<ul class="actions special">
-								<a href="https://github.com/FerretScript/ForestForecast" class="button large">VIEW PROJECT</a>
-							</ul>
-						</article>
-						
-						
-						<script>
-							const images = ["images/mexico.jpeg", "images/fore.png"];
-							let currentImageIndex = 0;
-							function rotateImages() {
-								currentImageIndex = (currentImageIndex + 1) % images.length;
-								const rotatingImage = document.getElementById("rotatingImage");
-								rotatingImage.src = images[currentImageIndex];
-							}
-						
-							setInterval(rotateImages, 4000); // Cambia la imagen cada 4 segundos (4000 ms)
-						</script>
-						
-							
-							
-						<!-- Posts -->
-						
-						<section class="posts">
-							<article>
-								<header>
-									<span class="date">Apr 2024 - Present</span>
-									<h2><a href="https://github.com/Gorchon/BrainyPad">BrainyPad: Note-to-Quiz Conversion Tool</a></h2>
-								</header>
-								<a href="https://github.com/Gorchon/BrainyPad" class="image main"><img src="images/brainyy.webp" alt="BrainyPad App Interface" /></a>
-								<p>At BrainyPad, we are transforming the way students study by turning notes into interactive quizzes. Our application uses Retrieval Augmented Generation (RAG) to quickly search and generate quizzes that are precisely tailored to the learning content. This not only reduces study time but also significantly improves retention. We continuously refine BrainyPad by conducting user testing, ensuring it aligns perfectly with educational needs and real-world feedback.</p>
-								<ul>
-									<a href="https://github.com/Gorchon/BrainyPad" class="button large">VIEW PROJECT</a>
-								</ul>
-							</article>
-							
-
-							<article>
-								<header>
-									<span class="date">Oct 2023 - Dec 2023</span>
-									<h2><a href="https://github.com/Gorchon/EmoCare">EmoCare: Emotional Helper Application</a></h2>
-								</header>
-								<a href="https://github.com/Gorchon/EmoCare" class="image main"><img src="images/emoop.jpeg" alt="EmoCare App Interface" /></a>
-								<p>Developed EmoCare, an app that identifies user emotions through a convolutional neural network and provides personalized responses. Built using React Native and NestJS, the app integrates OPENAI and Google Text-to-Speech for interactive voice responses. A dataset of around 5000 labeled images trained the neural network, achieving high precision in emotion detection. Firebase was utilized for effective data storage and retrieval, ensuring smooth user experience and data management.</p>
-								<ul>
-									<a href="https://github.com/Gorchon/EmoCare" class="button large">VIEW PROJECT</a>
-								</ul>
-							</article>
-
-							<article>
-								<header>
-									<span class="date">Nov 2023</span>
-									<h2><a href="https://github.com/David-OC17/ImageQualityEvaluation_Bosch">Bosch Image Evaluation Hackathon: ADAS Camera Quality Evaluation</a></h2>
-								</header>
-								<a href="https://github.com/David-OC17/ImageQualityEvaluation_Bosch" class="image main"><img src="images/bosch.png" alt="Bosch Image Evaluation Interface" /></a>
-								<p>Won first place at the Bosch VISION IO hackathon with our image recognition application, which boasts a 94% accuracy rate in evaluating images from car rear cameras. Utilizing Python, OpenCV, and Streamlit, we developed a practical solution that applies image evaluation techniques and machine learning to address real-world issues in automotive safety. Our efficient teamwork and innovative approach accelerated development by 15%, enhancing the ADAS camera evaluation process.</p>
-								<ul>
-									<a href="https://github.com/David-OC17/ImageQualityEvaluation_Bosch" class="button large">VIEW PROJECT</a>
-								</ul>
-							</article>
-							
-							
-					
-							<article>
-								<header>
-									<span class="date">Nov 4, 2023</span>
-									<h2><a href="https://github.com/Gorchon/Talk-with-gpt">AI powered talking assistant  </a></h2>
-								</header>
-								
-								<!-- Video Player (with adjusted width and height) -->
-								<video controls id="videoPlayer" width="380" height="280">
-									<source src="images/talk_gpt.mp4" type="video/mp4">
-								</video>
-								<p>
-									 This project allows seamless conversation with a digital assistant. Developed 
-									 using React Native with TypeScript for the frontend, NestJS was chosen for 
-									 managing backend requests and responses. To ensure optimal functionality, I
-									  integrated the OpenAI API and Google Cloud's Text-to-Speech API.
-
-									Throughout the project's development, I gained valuable experience in leveraging 
-									NestJS for improved frontend interactions. This project also sharpened my mobile 
-									software development skills and introduced me to various new technologies. 
-								</p>
-								<ul>
-									<a href="https://github.com/Gorchon/Talk-with-gpt" class="button large">VIEW PROJECT</a>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<span class="date">Oct 21, 2023</span>
-									<h2><a href="https://github.com/Gorchon/RN-Firebase-Shopping-App">Real Time Shopping app</a></h2>
-								</header>
-								
-								<!-- Video Player (with adjusted width and height) -->
-								<video controls id="videoPlayer" width="380" height="280">
-									<source src="images/unicorn's_shopping.webm" type="video/mp4">
-								</video>
-								<p>
-									This application serves as a real time shopping platform developed 
-									with React Native and seamlessly integrated with Firebase, offering 
-									real-time updates for both buyers and sellers. Beyond its efficiency-boosting 
-									features, it has been an immensely enriching learning experience. Throughout
-									 the development journey, I've gained valuable insights into the nuances of database
-									  management, the process of connecting applications to Firebase for dynamic data synchronization,
-									   and the exciting realm of emerging technologies. This project has been very beneficial for
-									    my skills, fortifying my expertise in software development and my knowledge about 
-										the mobile app technology landscape.
-								</p>
-								<ul>
-									<a href="https://github.com/Gorchon/RN-Firebase-Shopping-App" class="button large">VIEW PROJECT</a>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<span class="date">Oct 10, 2023</span>
-									<h2><a href="https://github.com/Gorchon/FacialEmotionRecognitionCNN">Emotion-Savvy Facial Recognition Model </a></h2>
-								</header>
-								
-								<!-- Video Player (with adjusted width and height) -->
-								<video controls id="videoPlayer" width="380" height="280">
-									<source src="images/facial_emotions.mp4" type="video/mp4">
-								</video>
-								<p>
-									This project is centered around an emotion expression detection model, 
-									employing a Convolutional Neural Network (CNN). I trained the 
-									model using a dataset of roughly 5000 images, classifying them
-									 into seven different emotions, such as happiness, anger, and 
-									 sadness. Leveraging Keras, alongside NumPy and Pandas for data 
-									 analysis, image dimension handling and the model training. I achieved a commendable 75%
-									  accuracy rate. Remarkably, all this work was executed on my personal 
-									  laptop. Through this journey, I deepened my understanding of convolutional 
-									  networks and their learning processes.
-								</p>
-								<ul>
-									<a href="https://github.com/Gorchon/FacialEmotionRecognitionCNN" class="button large">VIEW PROJECT</a>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<span class="date">sep 10, 2023</span>
-									<h2><a href="https://github.com/Gorchon/sudoku">AI-Driven Sudoku Solver</a></h2>
-								</header>
-								
-								<!-- Video Player (with adjusted width and height) -->
-								<video controls id="videoPlayer" width="380" height="280">
-									<source src="images/sudoku.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-							
-								<!-- Image Element (Initially Hidden) -->
-								<img src="images/nokia_s.webp" alt="" id="displayImage" style="display: none;">
-							
-								<p>
-									I had the privilege of working on a Sudoku-solving project using Python, where I implemented backtracking algorithms to create
-									an AI-driven solver. The solver demonstrated commendable puzzle-solving capabilities, consistently providing solutions within seconds,
-									which I found rather satisfying. To enhance the user experience, I integrated a feature for screenshot analysis, seamlessly blending it with Python's 
-									algorithmic execution. This addition ensured a more user-friendly interface for Sudoku enthusiasts, and it felt like a small but meaningful contribution. 
-									Through this project, I had the opportunity to sharpen my algorithmic skills and explore creative ways to solve problems, which was a valuable learning experience.
-								</p>
-								<ul>
-									<a href="https://github.com/Gorchon/sudoku" class="button large">VIEW PROJECT</a>
-								</ul>
-							</article>
-							<article>
-									<header>
-										<span class="date">Aug 10, 2023</span>
-										<h2><a href="https://gorchon.github.io/Snake_game/">Nokia Snake Game <br />
-										</a></h2>
-									</header>
-									<a href="https://gorchon.github.io/Snake_game/" class="image main"><img src="images/nonos.jpg" alt="" /></a>
-									<p>Experience the Snake Game Project, a technical feat in game development. Built using HTML5, JavaScript, and the Canvas API,
-										 this project tackled challenges like game logic, UI design, animation, event handling, and audio integration. Explore the fusion 
-										 of coding and design, offering players an engaging and challenging gaming experience. Dive into the world of web-based gaming and 
-										 witness the mastery of JavaScript, all wrapped up in this classic Snake Game.</p>
-									<ul <li><a href="https://github.com/Gorchon/Snake_game" class="button large">VIEW PROJECT</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Jul 12, 2023</span>
-										<h2><a href="https://github.com/Gorchon/snakes_and_ladders_oop">OOP Snakes and Ladders: Flexible Game Design <br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Gorchon/snakes_and_ladders_oop" class="image main"><img src="images/snake_l.png" alt="" /></a>
-									<p>Snakes and Ladders project using OOP. Classes represent game elements like board, snakes, ladders, and players.
-										 Encapsulated logic for better organization. Solid design principles ensure flexibility. 
-										 OOP enhances code structure, reusability, and modularity. Powerful tool for complex apps.</p>
-									<ul <li><a href="https://github.com/Gorchon/snakes_and_ladders_oop" class="button large">VIEW PROJECT</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">May 2, 2023</span>
-										<h2><a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis">Analyzing SARS-CoV-2 (COVID) genomes <br />
-											with R for data analysis</a></h2>
-									</header>
-									<a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis" class="image main"><img src="images/coronavirus8x5_0.jpg" alt="" /></a>
-									<p>I carried out a comprehensive analysis of the genome of the SARS-CoV-2 virus using data analysis and genomic sequencing tools in the R language.
-										We identified the most relevant mutations in terms of virulence, transmissibility, and resistance to available treatments. The information obtained
-										 could be useful for developing effective therapies and vaccines against COVID-19, as well as for more efficient prevention and control strategies. 
-										 This study helps to understand the evolution and behavior of the virus over time, and the fight against this infectious disease benefits from the 
-										 research and results obtained.</p>
-									<ul <li><a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis" class="button large">VIEW PROJECT</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 4, 2023</span>
-										<h2><a href="https://github.com/Gorchon/filter_page">Filter webpage<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Gorchon/filter_page" class="image fit"><img src="images/filter_page.jpg" alt="" /></a>
-									<p>I developed a website featuring a diverse selection of filters for image modification, allowing users to upload their own images and apply available filters to enhance them.
-										 This project required proficiency in several key technologies, including JavaScript, HTML, and CSS.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Gorchon/filter_page" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Oct 17, 2022</span>
-										<h2><a href="https://github.com/Gorchon/Nasa_space_apps_22">Nasa Space Apps Challenge </a></h2>
-									</header>
-									
-									<!-- Video Player (with adjusted width and height) -->
-									<a href="https://github.com/Gorchon/Nasa_space_apps_22" class="image main"><img src="images/opi.png" alt="" /></a>
-									<p>
-										I was part of a 5-person team that took on the NASA Space Apps Challenge hackathon. Together, we developed an innovative 
-										blockchain-based app using TypeScript, Figma, and React. Our primary goal was to create a secure and transparent system for disseminating scientific articles.
-							
-										The app leverages blockchain technology to establish an unalterable record of each article's 
-										publication, guaranteeing the authenticity and source of every piece of scientific work. To make it user-friendly for scientists, we incorporated Figma and React to design an intuitive interface for publishing and sharing articles.
-										
-										The potential impact of our app is significant. It could revolutionize the way scientific articles are published and shared, thanks to blockchain 
-										technology ensuring the credibility and source of these articles. Moreover, by streamlining and adding transparency to the publication process, it has the potential to save scientists valuable time and resources.
-									
-									</p>
-									<ul>
-										<a href="https://github.com/Gorchon/Nasa_space_apps_22" class="button large">VIEW PROJECT</a>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">December 23, 2022</span>
-										<h2><a href="https://github.com/Gorchon/To_do_list_ts">Task organizer app<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Gorchon/To_do_list_ts" class="image fit"><img src="images/to-do-list-apps.png" alt="" /></a>
-									<p>I created the Todo List app as a tool to help users better organize their daily tasks. Using  technologies such as TypeScript, HTML, and CSS, I developed this app with additional APIs to enhance its functionality. With intuitive task management and organization features, users can easily keep track of their to-do lists and stay on top of their daily schedules.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Gorchon/To_do_list_ts" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">February 18, 2023</span>
-										<h2><a href="https://github.com/Gorchon/green_screen_filter_with_JS">Green screen filter<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Gorchon/green_screen_filter_with_JS" class="image fit"><img src="images/green_filter.jpg" alt="" /></a>
-									<p>This is a web page that allows users to utilize a green screen filter. To use this feature, the user needs to upload a foreground image with a green background and a background image. This page was developed using web development technologies such as JavaScript, HTML, and CSS.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Gorchon/green_screen_filter_with_JS" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">jan 11, 2023</span>
-										<h2><a href="https://github.com/Gorchon/To_do_list_with_JS">To do list<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Gorchon/To_do_list_with_JS" class="image fit"><img src="images/to_do_list_js.jpg" alt="" /></a>
-									<p>This is a to-do list app created using JavaScript, HTML, and CSS. The app aims to assist users in organizing their lives more effectively by providing an easy-to-use platform for tracking tasks and events.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Gorchon/To_do_list_with_JS" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">March 11, 2023</span>
-										<h2><a href="https://github.com/Gorchon/Interactive_paint_with_js">Interactive paint<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Gorchon/Interactive_paint_with_js" class="image fit"><img src="images/paint_jss.jpeg" alt="" /></a>
-									<p>This is an interactive paint web page that allows users to draw anything they want using a variety of colors and pen thicknesses. The page is created using JavaScript, HTML, and CSS to provide a seamless and enjoyable user experience.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Gorchon/Interactive_paint_with_js" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2023</span>
-										<h2><a href="https://github.com/Gorchon/electric_fields">Plotting electric fields<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Gorchon/electric_fields" class="image fit"><img src="images/electric_fields.jpg" alt="" /></a>
-									<p>This program is a simulation that allows users to observe the behavior of a vector field based on the interactions of point charges. The simulation is created using Python, providing an immersive and interactive experience for users to explore the laws of physics. </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Gorchon/electric_fields" class="button">View project</a></li>
-									</ul>
-								</article>
-								
-								
-							</section>
-
-	
-				<!-- Footer -->
-					<footer id="footer">
-					
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Monterrey Institute of Technology and Higher Education<br />
-									Zapopan, Jalisco</p> 
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#"> 642 151 3931</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">chemasmas@outlook.es</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-soto-valenzuela-070a2626b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWa79aa2fRM2e0X4j7VsuSA%3D%3D" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://github.com/Gorchon" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
+			<!-- Intro -->
+			<div id="intro">
+				<h1>Chema's Computer<br />Science Portfolio</h1>
+				<p>
+					Welcome to my coding journey!<br />
+					Computer Science Student skilled in software development, AI models, and a deep appreciation for mathematics.
+					Check out my LinkedIn <a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%A1-soto-valenzuela-070a2626b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWa79aa2fRM2e0X4j7VsuSA%3D%3D">¡Chema's LinkedIn page!</a>.
+				</p>
+				<ul class="actions">
+					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Code portfolio</a>
+			</header>
 
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li class="active"><a href="index.html">Projects</a></li>
+					<li><a href="cv.html">Curriculum Vitae (CV)</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="certifications.html">Certifications & Awards</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%A1-soto-valenzuela-070a2626b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWa79aa2fRM2e0X4j7VsuSA%3D%3D" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/Gorchon" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Featured Post -->
+				<article class="post featured">
+					<header class="major">
+						<span class="date">Apr 2024</span>
+						<h2>
+							<a href="https://github.com/FerretScript/ForestForecast">ForestForecast <br />- Deforestation Predictor - Hackathon Winner</a>
+						</h2>
+						<p>
+							I was part of a team that developed ForestForecast, an award-winning web platform designed to predict and visualize areas at high risk of illegal deforestation using satellite imagery and historical data from NASA, alongside Google Earth. This project won GuadaHack, one of Mexico's top hackathons.
+							<br /><br />
+							Utilizing advanced machine learning models, we achieved an accuracy of 88% in identifying regions susceptible to deforestation. Our platform integrates seamlessly with backend services using Flask and is deployed on AWS, ensuring robust real-time data processing and scalability.
+							<br /><br />
+							ForestForecast not only highlights at-risk areas but also enhances global conservation efforts by providing accessible, interactive, and insightful data visualization to a wide audience, including environmental agencies and local authorities.
+						</p>
+					</header>
+					<div id="imageContainer" class="image main">
+						<img id="rotatingImage" src="images/mexico.jpeg" alt="" />
+					</div>
+					<ul class="actions special">
+						<a href="https://github.com/FerretScript/ForestForecast" class="button large">VIEW PROJECT</a>
+					</ul>
+				</article>
+
+				<script>
+					const images = ["images/mexico.jpeg", "images/fore.png"];
+					let currentImageIndex = 0;
+					function rotateImages() {
+						currentImageIndex = (currentImageIndex + 1) % images.length;
+						const rotatingImage = document.getElementById("rotatingImage");
+						rotatingImage.src = images[currentImageIndex];
+					}
+					setInterval(rotateImages, 4000); // Change image every 4 seconds
+				</script>
+
+				<!-- Posts (All Projects) -->
+				<section class="posts">
+					<!-- BrainyPad -->
+					<article>
+						<header>
+							<span class="date">Apr 2024 - Present</span>
+							<h2><a href="https://github.com/Gorchon/BrainyPad">BrainyPad: Note-to-Quiz Conversion Tool</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/BrainyPad" class="image main"><img src="images/brainyy.webp" alt="BrainyPad App Interface" /></a>
+						<p>
+							At BrainyPad, we are transforming the way students study by turning notes into interactive quizzes. Our application uses Retrieval Augmented Generation (RAG) to quickly search and generate quizzes that are precisely tailored to the learning content. This not only reduces study time but also significantly improves retention. We continuously refine BrainyPad by conducting user testing, ensuring it aligns perfectly with educational needs and real-world feedback.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/BrainyPad" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- EmoCare -->
+					<article>
+						<header>
+							<span class="date">Oct 2023 - Dec 2023</span>
+							<h2><a href="https://github.com/Gorchon/EmoCare">EmoCare: Emotional Helper Application</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/EmoCare" class="image main"><img src="images/emoop.jpeg" alt="EmoCare App Interface" /></a>
+						<p>
+							Developed EmoCare, an app that identifies user emotions through a convolutional neural network and provides personalized responses. Built using React Native and NestJS, the app integrates OPENAI and Google Text-to-Speech for interactive voice responses. A dataset of around 5000 labeled images trained the neural network, achieving high precision in emotion detection. Firebase was utilized for effective data storage and retrieval, ensuring smooth user experience and data management.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/EmoCare" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- Bosch Image Evaluation -->
+					<article>
+						<header>
+							<span class="date">Nov 2023</span>
+							<h2><a href="https://github.com/David-OC17/ImageQualityEvaluation_Bosch">Bosch Image Evaluation Hackathon: ADAS Camera Quality Evaluation</a></h2>
+						</header>
+						<a href="https://github.com/David-OC17/ImageQualityEvaluation_Bosch" class="image main"><img src="images/bosch.png" alt="Bosch Image Evaluation Interface" /></a>
+						<p>
+							Won first place at the Bosch VISION IO hackathon with our image recognition application, which boasts a 94% accuracy rate in evaluating images from car rear cameras. Utilizing Python, OpenCV, and Streamlit, we developed a practical solution that applies image evaluation techniques and machine learning to address real-world issues in automotive safety. Our efficient teamwork and innovative approach accelerated development by 15%, enhancing the ADAS camera evaluation process.
+						</p>
+						<ul>
+							<a href="https://github.com/David-OC17/ImageQualityEvaluation_Bosch" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- AI Talking Assistant -->
+					<article>
+						<header>
+							<span class="date">Nov 4, 2023</span>
+							<h2><a href="https://github.com/Gorchon/Talk-with-gpt">AI powered talking assistant</a></h2>
+						</header>
+						<video controls id="videoPlayer" width="380" height="280">
+							<source src="images/talk_gpt.mp4" type="video/mp4">
+						</video>
+						<p>
+							This project allows seamless conversation with a digital assistant. Developed using React Native with TypeScript for the frontend, NestJS was chosen for managing backend requests and responses. To ensure optimal functionality, I integrated the OpenAI API and Google Cloud's Text-to-Speech API. Throughout the project's development, I gained valuable experience in leveraging NestJS for improved frontend interactions. This project also sharpened my mobile software development skills and introduced me to various new technologies.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/Talk-with-gpt" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- Real Time Shopping App -->
+					<article>
+						<header>
+							<span class="date">Oct 21, 2023</span>
+							<h2><a href="https://github.com/Gorchon/RN-Firebase-Shopping-App">Real Time Shopping app</a></h2>
+						</header>
+						<video controls id="videoPlayer" width="380" height="280">
+							<source src="images/unicorn's_shopping.webm" type="video/mp4">
+						</video>
+						<p>
+							This application serves as a real time shopping platform developed with React Native and seamlessly integrated with Firebase, offering real-time updates for both buyers and sellers. Beyond its efficiency-boosting features, it has been an immensely enriching learning experience. Throughout the development journey, I've gained valuable insights into database management, connecting applications to Firebase for dynamic data synchronization, and exploring emerging technologies. This project has been very beneficial for my skills and knowledge about mobile app development.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/RN-Firebase-Shopping-App" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- Facial Emotion Recognition -->
+					<article>
+						<header>
+							<span class="date">Oct 10, 2023</span>
+							<h2><a href="https://github.com/Gorchon/FacialEmotionRecognitionCNN">Emotion-Savvy Facial Recognition Model</a></h2>
+						</header>
+						<video controls id="videoPlayer" width="380" height="280">
+							<source src="images/facial_emotions.mp4" type="video/mp4">
+						</video>
+						<p>
+							This project is centered around an emotion expression detection model, employing a Convolutional Neural Network (CNN). I trained the model using a dataset of roughly 5000 images, classifying them into seven emotions (e.g., happiness, anger, sadness). Leveraging Keras alongside NumPy and Pandas for data analysis and model training, I achieved a commendable 75% accuracy rate. All work was executed on my personal laptop, deepening my understanding of convolutional networks.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/FacialEmotionRecognitionCNN" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- AI-Driven Sudoku Solver -->
+					<article>
+						<header>
+							<span class="date">Sep 10, 2023</span>
+							<h2><a href="https://github.com/Gorchon/sudoku">AI-Driven Sudoku Solver</a></h2>
+						</header>
+						<video controls id="videoPlayer" width="380" height="280">
+							<source src="images/sudoku.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<img src="images/nokia_s.webp" alt="" id="displayImage" style="display: none;">
+						<p>
+							I had the privilege of working on a Sudoku-solving project using Python, implementing backtracking algorithms to create an AI-driven solver. The solver consistently provided solutions within seconds. An integrated screenshot analysis feature enhanced user experience for Sudoku enthusiasts. This project sharpened my algorithmic skills and creative problem-solving.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/sudoku" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- Nokia Snake Game -->
+					<article>
+						<header>
+							<span class="date">Aug 10, 2023</span>
+							<h2><a href="https://gorchon.github.io/Snake_game/">Nokia Snake Game</a></h2>
+						</header>
+						<a href="https://gorchon.github.io/Snake_game/" class="image main"><img src="images/nonos.jpg" alt="" /></a>
+						<p>
+							Experience the Snake Game Project—a technical feat in game development using HTML5, JavaScript, and the Canvas API. This project tackles game logic, UI design, animation, event handling, and audio integration to offer an engaging and challenging web-based gaming experience.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/Snake_game" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- OOP Snakes and Ladders -->
+					<article>
+						<header>
+							<span class="date">Jul 12, 2023</span>
+							<h2><a href="https://github.com/Gorchon/snakes_and_ladders_oop">OOP Snakes and Ladders: Flexible Game Design</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/snakes_and_ladders_oop" class="image main"><img src="images/snake_l.png" alt="" /></a>
+						<p>
+							An OOP-based Snakes and Ladders project where classes represent game elements like board, snakes, ladders, and players. This approach enhances code organization, flexibility, reusability, and modularity for complex applications.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/snakes_and_ladders_oop" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- Analyzing SARS-CoV-2 Genomes -->
+					<article>
+						<header>
+							<span class="date">May 2, 2023</span>
+							<h2><a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis">Analyzing SARS-CoV-2 (COVID) genomes with R for data analysis</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis" class="image main"><img src="images/coronavirus8x5_0.jpg" alt="" /></a>
+						<p>
+							Conducted a comprehensive analysis of the SARS-CoV-2 genome using R for data analysis and genomic sequencing. Relevant mutations were identified to aid in developing effective therapies and vaccines, contributing to a better understanding of the virus’s evolution.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/Analyzing_SARS-CoV-2_-COVID-_genomes_with_R_for_data_analysis" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- Filter Webpage -->
+					<article>
+						<header>
+							<span class="date">April 4, 2023</span>
+							<h2><a href="https://github.com/Gorchon/filter_page">Filter webpage</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/filter_page" class="image fit"><img src="images/filter_page.jpg" alt="" /></a>
+						<p>
+							Developed a website offering a diverse selection of filters for image modification. Users can upload images and apply filters, utilizing technologies such as JavaScript, HTML, and CSS.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/Gorchon/filter_page" class="button">View project</a></li>
+						</ul>
+					</article>
+
+					<!-- Nasa Space Apps Challenge -->
+					<article>
+						<header>
+							<span class="date">Oct 17, 2022</span>
+							<h2><a href="https://github.com/Gorchon/Nasa_space_apps_22">Nasa Space Apps Challenge</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/Nasa_space_apps_22" class="image main"><img src="images/opi.png" alt="" /></a>
+						<p>
+							Part of a 5-person team for the NASA Space Apps Challenge, developing an innovative blockchain-based app with TypeScript, Figma, and React to securely disseminate scientific articles.
+						</p>
+						<ul>
+							<a href="https://github.com/Gorchon/Nasa_space_apps_22" class="button large">VIEW PROJECT</a>
+						</ul>
+					</article>
+
+					<!-- Task Organizer App -->
+					<article>
+						<header>
+							<span class="date">December 23, 2022</span>
+							<h2><a href="https://github.com/Gorchon/To_do_list_ts">Task organizer app</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/To_do_list_ts" class="image fit"><img src="images/to-do-list-apps.png" alt="" /></a>
+						<p>
+							Created a Todo List app using TypeScript, HTML, and CSS with additional APIs to enhance functionality, enabling users to manage daily tasks and schedules efficiently.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/Gorchon/To_do_list_ts" class="button">View project</a></li>
+						</ul>
+					</article>
+
+					<!-- Green Screen Filter -->
+					<article>
+						<header>
+							<span class="date">February 18, 2023</span>
+							<h2><a href="https://github.com/Gorchon/green_screen_filter_with_JS">Green screen filter</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/green_screen_filter_with_JS" class="image fit"><img src="images/green_filter.jpg" alt="" /></a>
+						<p>
+							A web page that lets users apply a green screen filter by uploading a foreground image (with a green background) and a background image. Developed using JavaScript, HTML, and CSS.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/Gorchon/green_screen_filter_with_JS" class="button">View project</a></li>
+						</ul>
+					</article>
+
+					<!-- To do list (JS) -->
+					<article>
+						<header>
+							<span class="date">Jan 11, 2023</span>
+							<h2><a href="https://github.com/Gorchon/To_do_list_with_JS">To do list</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/To_do_list_with_JS" class="image fit"><img src="images/to_do_list_js.jpg" alt="" /></a>
+						<p>
+							A to-do list app built with JavaScript, HTML, and CSS to help users organize daily tasks and events.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/Gorchon/To_do_list_with_JS" class="button">View project</a></li>
+						</ul>
+					</article>
+
+					<!-- Interactive Paint -->
+					<article>
+						<header>
+							<span class="date">March 11, 2023</span>
+							<h2><a href="https://github.com/Gorchon/Interactive_paint_with_js">Interactive paint</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/Interactive_paint_with_js" class="image fit"><img src="images/paint_jss.jpeg" alt="" /></a>
+						<p>
+							An interactive paint web page that allows users to draw freely using various colors and pen thicknesses. Created with JavaScript, HTML, and CSS.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/Gorchon/Interactive_paint_with_js" class="button">View project</a></li>
+						</ul>
+					</article>
+
+					<!-- Plotting Electric Fields -->
+					<article>
+						<header>
+							<span class="date">April 7, 2023</span>
+							<h2><a href="https://github.com/Gorchon/electric_fields">Plotting electric fields</a></h2>
+						</header>
+						<a href="https://github.com/Gorchon/electric_fields" class="image fit"><img src="images/electric_fields.jpg" alt="" /></a>
+						<p>
+							A simulation program using Python that allows users to observe the behavior of a vector field generated by point charges, offering an interactive physics exploration.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/Gorchon/electric_fields" class="button">View project</a></li>
+						</ul>
+					</article>
+				</section>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Location</h3>
+						<p>
+							Monterrey Institute of Technology and Higher Education<br />
+							Zapopan, Jalisco
+						</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="#">642 151 3931</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="#">chemasmas@outlook.es</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%A1-soto-valenzuela-070a2626b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWa79aa2fRM2e0X4j7VsuSA%3D%3D" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/Gorchon" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
+
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul>
+					<li>&copy; Untitled</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
